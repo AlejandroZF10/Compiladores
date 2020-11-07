@@ -1,0 +1,14 @@
+Girar[75];
+for(i=0;i<5;i=i+1){
+Avanzar[200];
+Girar[180+36];
+CambiarColor[255, i*226, i*251];
+}
+
+Girar[253];
+
+for(i=0;i<360;i=i+1)
+{
+Avanzar[1.835];
+Girar[1];
+}

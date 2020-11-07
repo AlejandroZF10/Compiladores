@@ -1,0 +1,20 @@
+proc arbol () {
+   if ($1 > 15) {
+      Avanzar [ $1 ] ;
+      Girar [ 20 ] ;
+      arbol ($1 - 15 ) ;
+      Girar [320] ;
+      arbol ($1 - 15 ) ;
+      Girar [20] ;
+      Avanzar [ (-1)*($1) ] ;
+      CambiarColor[$1*13, $1*26, $1*51];
+   }
+}
+
+Girar [ 90 ] ;
+CambiarColor[0, 0, 0];
+Girar [ 180 ] ;
+Avanzar [ 200 ] ;
+Girar [ 180 ];
+CambiarColor[100, 34, 44];
+arbol(100);

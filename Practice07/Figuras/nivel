@@ -1,0 +1,17 @@
+proc regla(){
+   if($2>0)
+   {
+      regla($1*0.5, $2-1);
+      Avanzar[$1*0.5];
+      Girar[90];
+      Avanzarr[$2*40];
+      Avanzar[-$2*40];
+      Girar[-90];
+      regla($1*0.5, $2-1);
+      Avanzar[-$1*0.5];
+   }      
+}
+Avanzar[-250];
+Avanzar[512];
+Avanzar[-512];
+regla(512, 6);

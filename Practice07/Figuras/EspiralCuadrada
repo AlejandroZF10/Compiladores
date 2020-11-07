@@ -1,0 +1,16 @@
+func potencia () {
+    retorno = 1;
+    for(aux=0; aux<$2; aux=aux+1){
+        retorno = retorno*$1;
+    }
+    return retorno;
+}
+for(i=0; i<24; i=i+1){
+    Avanzar[potencia(i,2)];
+    CambiarColor[
+      5*potencia(i,1),
+      5*potencia(i,2),
+      5*potencia(i,3)
+   ];
+    Girar[90];
+}

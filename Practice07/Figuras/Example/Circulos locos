@@ -1,0 +1,15 @@
+
+proc circulo(){
+   for(aux=0; aux<360; aux=aux+1){
+      CambiarColor[$1,$2,$3];
+      Avanzar[2];
+      Girar[1];
+   }
+}
+proc flor(){
+   for(i=0;i<100;i=i+1){
+      circulo((i+1)*30, (i+1)*32, (i+1)*60);
+      Girar[35];
+   }
+}
+flor();

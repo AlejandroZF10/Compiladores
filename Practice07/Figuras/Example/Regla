@@ -1,0 +1,33 @@
+proc rectangulo(){
+   Girar[270];
+   Avanzar[100];
+   Girar[270];
+   Avanzar[400];
+   Girar[270];
+   Avanzar[100];
+      
+}
+
+proc regla(){
+   if($1 < 100){
+      Avanzar[4];
+      Girar[270];
+      if($2 < 4){
+         Avanzar[5];
+         Avanzar[-5];
+         Girar[90];
+         regla($1+1, $2+1);
+      }else{
+         Avanzar[10];
+         Avanzar[-10];
+         Girar[90];
+         regla($1+1, 0);
+      }
+
+   }
+
+}
+
+Avanzar[-200];
+regla(0, 0);
+rectangulo();

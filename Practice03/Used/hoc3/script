@@ -1,0 +1,2 @@
+yacc -d hoc3.y
+gcc y.tab.c init.c math.c symbol.c -lm & ./a.out
